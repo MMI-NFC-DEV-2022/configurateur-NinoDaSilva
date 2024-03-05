@@ -6,6 +6,5 @@ import SvgProfil from '@/components/SvgProfil.vue';
 <template>
   <main>
     <h1>Accueil</h1>
-    <SvgProfil />
   </main>
 </template>
