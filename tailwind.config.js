@@ -6,5 +6,6 @@ export default {
   },
   plugins: [
     require('@headlessui/tailwindcss'),
+    require('daisyui'),
   ],
 }
