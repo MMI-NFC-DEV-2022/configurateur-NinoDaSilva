@@ -3,12 +3,12 @@ import type { ChaussureSvg } from '@/types-svg'
 
 withDefaults(defineProps<ChaussureSvg>(), {
   semelle: 'white',
-  empeigne: 'black',
-  pointe: 'black',
+  empeigne: 'white',
+  pointe: 'white',
   oeillet: 'white',
   bande: 'white',
-  languette: 'black',
-  lacet: 'black',
+  languette: 'white',
+  lacet: 'white',
   trimestre: 'white'
 });
 </script>

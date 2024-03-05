@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import FormPage from '@/components/FormSvg.vue';
-import SvgProfil from '@/components/SvgProfil.vue';
-import SvgDessus from '@/components/SvgDessus.vue';
+import FormSvg from '@/components/FormSvg.vue';
+import FormImages from '@/components/FormImages.vue';
 
 </script>
 <template>
     <div>
-        <h2 class="text-2xl">Visualisation</h2>
-        <SvgProfil />
-        <SvgDessus />
+        <h2>Formulaire Svg</h2>
+        <FormSvg />
     </div>
-    <FormSvg />
+    <div>
+        <h2>Formulaire Image</h2>
+        <FormImages />
+    </div>
 </template>

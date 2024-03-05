@@ -5,9 +5,5 @@
 body {
   font-family: 'Nunito', sans-serif;
   padding: 20px;
-}
-
-.menu > *:hover{
-  opacity: 0.9;
-  color: #000;
+  transition: all 0.3s;
 }
