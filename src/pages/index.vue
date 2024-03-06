@@ -1,16 +1,39 @@
 <script setup lang="ts">
 import BasketProfil from "@/components/SvgProfil.vue";
 import type { Basket } from "@/types";
-const exemple0: Basket = {
-  semelle: "#FF0000",
-  empeigne: "#FFFFFF",
-  pointe: "#FFFFFF",
-  oeillet: "#FFFFFF",
-  bande: "#00FF00",
-  languette: "#FFFFFF",
-  lacet: "#00FF00",
-  trimestre: "#FFFFFF",
-};
+const exemples: Basket [] = [
+  {
+    semelle: "#FF0000",
+    empeigne: "#FFFFFF",
+    pointe: "#FFFFFF",
+    oeillet: "#FFFFFF",
+    bande: "#00FF00",
+    languette: "#FFFFFF",
+    lacet: "#00FF00",
+    trimestre: "#FFFFFF",
+  },
+  {
+    semelle: "#FF0000",
+    empeigne: "#FFFFFF",
+    pointe: "#FFFFFF",
+    oeillet: "#FFFFFF",
+    bande: "#00FF00",
+    languette: "#FFFFFF",
+    lacet: "#00FF00",
+    trimestre: "#FFFFFF",
+  },
+  {
+    semelle: "#FF0000",
+    empeigne: "#FFFFFF",
+    pointe: "#FFFFFF",
+    oeillet: "#FFFFFF",
+    bande: "#00FF00",
+    languette: "#FFFFFF",
+    lacet: "#00FF00",
+    trimestre: "#FFFFFF",
+  }
+];
+
 </script>
 <template>
   <section>
@@ -20,10 +43,10 @@ const exemple0: Basket = {
         <RouterLink
           :to="{
             name: '/basket/exemple/[data]',
-            params: { data: JSON.stringify(exemple0) },
+            params: { data: JSON.stringify(exemples) },
           }"
         >
-          <BasketProfil class="w-64" v-bind="exemple0" />
+          <BasketProfil class="w-64" v-for="exemple in exemples" v-bind="exemple" />
         </RouterLink>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <nav class="pb-10 *:text-xl flex flex-col *:pt-1 menu">
       <RouterLink to="/" class="hover:text-green-900 hover:font-bold">Home</RouterLink>
       <RouterLink to="/FormPage" class="hover:text-green-900 hover:font-bold">Personnalisation</RouterLink>
+      <RouterLink to="/basket/new" class="hover:text-green-900 hover:font-bold">New Basket</RouterLink>
     </nav>
   </header>
 
