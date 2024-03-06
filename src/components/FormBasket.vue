@@ -5,11 +5,11 @@ import SvgProfil from '@/components/SvgProfil.vue'
 import SvgDessus from '@/components/SvgDessus.vue'
 
 const props = defineProps<{
-  data?: Basket;
-  id?: string;
-}>();
+  data?: Basket
+  id?: string
+}>()
 
-const basket = ref<Basket>(props.data ?? {});
+const basket = ref<Basket>(props.data ?? {})
 </script>
 
 <template>
@@ -24,14 +24,54 @@ const basket = ref<Basket>(props.data ?? {});
     </div>
 
     <FormKit type="form" v-model="basket">
-      <FormKit name="semelle" label="semelle" value="#ffffff" type="radio" :options="colors" class=""/>
-      <FormKit name="empeigne" label="empeigne" value="#ffffff" type="radio" :options="colors" class=""/>
-      <FormKit name="pointe" label="pointe" value="#ffffff" type="radio" :options="colors" class=""/>
-      <FormKit name="oeillet" label="oeillet" value="#ffffff" type="radio" :options="colors" class=""/>
-      <FormKit name="bande" label="bande" value="#ffffff" type="radio" :options="colors" class=""/>
-      <FormKit name="languette" label="languette" value="#ffffff" type="radio" :options="colors" class=""/>
-      <FormKit name="lacet" label="lacet" value="#ffffff" type="radio" :options="colors" class=""/>
-      <FormKit name="trimestre" label="trimestre" value="#ffffff" type="radio" :options="colors" class=""/>
+      <FormKit name="semelle" label="semelle" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{ context.option.label }}</span>
+        </template>
+      </FormKit>
+      <FormKit name="empeigne" label="empeigne" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{}}</span>
+        </template>
+      </FormKit>
+      <FormKit name="pointe" label="pointe" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{}}</span>
+        </template>
+      </FormKit>
+      <FormKit name="oeillet" label="oeillet" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{}}</span>
+        </template>
+      </FormKit>
+      <FormKit name="bande" label="bande" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{}}</span>
+        </template>
+      </FormKit>
+      <FormKit name="languette" label="languette" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{}}</span>
+        </template>
+      </FormKit>
+      <FormKit name="lacet" label="lacet" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{}}</span>
+        </template>
+      </FormKit>
+      <FormKit name="trimestre" label="trimestre" value="#ffffff" type="radio" :options="colors">
+        <template #label="context">
+          <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }" />
+          <span>{{}}</span>
+        </template>
+      </FormKit>
     </FormKit>
   </div>
 </template>
