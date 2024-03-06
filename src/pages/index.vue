@@ -13,21 +13,21 @@ const exemples: Basket [] = [
     trimestre: "#FFFFFF",
   },
   {
-    semelle: "#FF0000",
+    semelle: "#FF0FF0",
     empeigne: "#FFFFFF",
     pointe: "#FFFFFF",
     oeillet: "#FFFFFF",
-    bande: "#00FF00",
+    bande: "#00FFFF",
     languette: "#FFFFFF",
     lacet: "#00FF00",
     trimestre: "#FFFFFF",
   },
   {
-    semelle: "#FF0000",
+    semelle: "#FFF000",
     empeigne: "#FFFFFF",
     pointe: "#FFFFFF",
     oeillet: "#FFFFFF",
-    bande: "#00FF00",
+    bande: "#FFFFFF",
     languette: "#FFFFFF",
     lacet: "#00FF00",
     trimestre: "#FFFFFF",
@@ -40,13 +40,13 @@ const exemples: Basket [] = [
     <h1 class="text-2xl">Exemples de Baskets</h1>
     <div class="flex flex-wrap gap-2">
       <div class="w-64">
-        <RouterLink
+        <RouterLink v-for="exemple in exemples" :key="exemple"
           :to="{
             name: '/basket/exemple/[data]',
-            params: { data: JSON.stringify(exemples) },
+            params: { data: JSON.stringify(exemple) },
           }"
         >
-          <BasketProfil class="w-64" v-for="exemple in exemples" v-bind="exemple" />
+          <BasketProfil class="w-64" v-bind="exemple" />
         </RouterLink>
       </div>
     </div>
