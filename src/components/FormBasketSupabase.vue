@@ -26,7 +26,7 @@ async function upsertBasket(dataForm, node) {
     }
 }
 
-// Redirection vers le quartier de modifiee
+// Redirection vers la basket modifiee
 const route = useRoute("/basket/edit/[id]");
 if (route.params.id) {
     let { data, error } = await supabase.from("Basket").select("*").eq("id", route.params.id);
@@ -55,14 +55,14 @@ if (route.params.id) {
       }"
       :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
     >
-      <FormListColor name="semelle_color" label="semelle" />
-      <FormListColor name="empeigne_color" label="empeigne" />
-      <FormListColor name="pointe_color" label="pointe" />
-      <FormListColor name="oeillet_color" label="oeillet" />
-      <FormListColor name="bande_color" label="bande" />
-      <FormListColor name="languette_color" label="languette" />
-      <FormListColor name="lacet_color" label="lacet" />
-      <FormListColor name="trimestre_color" label="trimestre" />
+      <FormListColor name="semelle" label="semelle" />
+      <FormListColor name="empeigne" label="empeigne" />
+      <FormListColor name="pointe" label="pointe" />
+      <FormListColor name="oeillet" label="oeillet" />
+      <FormListColor name="bande" label="bande" />
+      <FormListColor name="languette" label="languette" />
+      <FormListColor name="lacet" label="lacet" />
+      <FormListColor name="trimestre" label="trimestre" />
       <!-- Matériaux -->
       <FormKit
         name="materiaux"
