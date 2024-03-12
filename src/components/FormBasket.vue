@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { type Basket, colors, materiaux } from '@/types'
+import { type Basket, materiaux } from '@/types'
 import SvgProfil from '@/components/SvgProfil.vue'
 import SvgDessus from '@/components/SvgDessus.vue'
 import FormListColor from './FormListColor.vue'
