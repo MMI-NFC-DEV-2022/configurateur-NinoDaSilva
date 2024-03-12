@@ -56,127 +56,53 @@ export type Database = {
       }
       Basket: {
         Row: {
-          bande_color: number | null
-          empeigne_color: number | null
+          bande_color: string | null
+          empeigne_color: string | null
           id: number
-          lacet_color: number | null
-          languette_color: number | null
+          lacet_color: string | null
+          languette_color: string | null
           materiaux: number | null
           name_basket: string | null
-          oeillet_color: number | null
-          pointe_color: number | null
-          semelle_color: number | null
-          trimestre_color: number | null
+          oeillet_color: string | null
+          pointe_color: string | null
+          semelle_color: string | null
+          trimestre_color: string | null
         }
         Insert: {
-          bande_color?: number | null
-          empeigne_color?: number | null
+          bande_color?: string | null
+          empeigne_color?: string | null
           id?: number
-          lacet_color?: number | null
-          languette_color?: number | null
+          lacet_color?: string | null
+          languette_color?: string | null
           materiaux?: number | null
           name_basket?: string | null
-          oeillet_color?: number | null
-          pointe_color?: number | null
-          semelle_color?: number | null
-          trimestre_color?: number | null
+          oeillet_color?: string | null
+          pointe_color?: string | null
+          semelle_color?: string | null
+          trimestre_color?: string | null
         }
         Update: {
-          bande_color?: number | null
-          empeigne_color?: number | null
+          bande_color?: string | null
+          empeigne_color?: string | null
           id?: number
-          lacet_color?: number | null
-          languette_color?: number | null
+          lacet_color?: string | null
+          languette_color?: string | null
           materiaux?: number | null
           name_basket?: string | null
-          oeillet_color?: number | null
-          pointe_color?: number | null
-          semelle_color?: number | null
-          trimestre_color?: number | null
+          oeillet_color?: string | null
+          pointe_color?: string | null
+          semelle_color?: string | null
+          trimestre_color?: string | null
         }
         Relationships: [
-          {
-            foreignKeyName: "public_Basket_bande_color_fkey"
-            columns: ["bande_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "public_Basket_empeigne_color_fkey"
-            columns: ["empeigne_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "public_Basket_lacet_color_fkey"
-            columns: ["lacet_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "public_Basket_languette_color_fkey"
-            columns: ["languette_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
-          },
           {
             foreignKeyName: "public_Basket_materiaux_fkey"
             columns: ["materiaux"]
             isOneToOne: false
             referencedRelation: "Materiaux-basket"
             referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "public_Basket_oeillet_color_fkey"
-            columns: ["oeillet_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "public_Basket_pointe_color_fkey"
-            columns: ["pointe_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "public_Basket_semelle_color_fkey"
-            columns: ["semelle_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "public_Basket_trimestre_color_fkey"
-            columns: ["trimestre_color"]
-            isOneToOne: false
-            referencedRelation: "Colors-basket"
-            referencedColumns: ["id"]
           }
         ]
-      }
-      "Colors-basket": {
-        Row: {
-          hex: string | null
-          id: number
-          name: string | null
-        }
-        Insert: {
-          hex?: string | null
-          id?: number
-          name?: string | null
-        }
-        Update: {
-          hex?: string | null
-          id?: number
-          name?: string | null
-        }
-        Relationships: []
       }
       commune: {
         Row: {
